@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Super Hashrio | Verfificador de Hash</title>
+		<!-- Opcional: Fuente de Google Fonts para un toque retro -->
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+		<!-- Elemento de audio para la música de fondo -->
+		<audio id="mario-music" loop>
+			<!-- Asegúrate de tener un archivo mario_theme.mp3 en tu carpeta 'audio' -->
+			<source src="audio/mario_theme.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento de audio.
+		</audio>
+
+		<header>
+			<center><img src="img/pagina/TituloUniversoMario.png" alt="Título Super Mario Bros"></center>
+		</header>
+		<center>
+			<h1>
+			<canvas id = "miCanvas" width="500" height="200">
+				Tu navegador no soporta canvas :(
+			</canvas>
+			</h1>
+		</center>
+
+		<!-- Contenedor para el display de hash temporal en el juego -->
+		<div id="in-game-hash-display" class="hash-display-popup hidden">
+			<!-- El hash se mostrará aquí -->
+		</div>
+
+		<!-- Pantalla de Victoria/Fin de Nivel -->
+		<div id="win-screen-container" class="win-screen-overlay hidden">
+			<h2>¡Nivel Completado!</h2>
+			<p>Has revelado los hashes para <span id="current-app-name-win-screen"></span>.</p>
+			<div class="win-screen-buttons">
+				<button id="win-putty-btn" data-app="putty">Putty</button>
+				<button id="win-plink-btn" data-app="plink">Plink</button>
+				<button id="win-virtualbox-btn" data-app="virtualbox">VirtualBox</button>
+			</div>
+			<div id="win-screen-hashes-output" class="win-screen-hashes-output">
+				<!-- Los hashes de la app seleccionada se mostrarán aquí -->
+			</div>
+			<div class="win-screen-actions">
+				<button id="download-app-btn">Descargar <span id="download-app-name"></span></button>
+				<button id="next-level-game-btn">Siguiente Nivel</button>
+			</div>
+		</div>
+
+		<!-- Mensaje de Fin de Juego (cuando todas las apps han sido completadas) -->
+		<div id="game-over-screen" class="game-over-screen hidden">
+            <h2>¡Felicidades, Héroe del Reino Champiñón!</h2>
+            <p>Has encontrado todos los hashes de todas las aplicaciones.</p>
+            <button id="restart-game-btn" class="action-btn">Volver a Jugar</button>
+        </div>
+
+		<script type="text/javascript" src = "js/mario_sin_reg.js"></script>
+	</body>
+</html>
