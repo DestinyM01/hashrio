@@ -7,30 +7,31 @@ window.onload = function()
 	document.onkeyup = function(e) { keys[e.which] = false; }
 
 	// --- NUEVAS CONSTANTES Y VARIABLES GLOBALES PARA EL JUEGO DE HASHES ---
+	
 	const appHashesData = {
-    const appHashesData = {
         putty: {
             name: 'Putty',
             sha256: 'SHA256 de Putty: 16cbe40fb24ce2d422afddb5a90a5801ced32ef52c22c2fc77b25a90837f28ad',
             md5: 'MD5 de Putty: 36e31f610eef3223154e6e8fd074190f',
             sha1: 'SHA1 de Putty: 1f2800382cd71163c10e5ce0a32b60297489fbb5 ',
-            downloadLink: 'https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe'
+			downloadLink: 'https://www.putty.org/latest.html'
         },
         plink: {
             name: 'Plink',
             sha256: 'SHA256 de Plink: 50479953865b30775056441b10fdcb984126ba4f98af4f64756902a807b453e7',
             md5: 'MD5 de Plink: 269ce7b3a3fcdf735cd8a37c04abfdae',
             sha1: 'SHA1 de Plink: 46ddfbbb5b4193279b9e024a5d013f5d825fcdf5',
-            downloadLink: 'https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe' // Plink es parte de Putty
+			 downloadLink: 'https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html'
         },
         virtualbox: {
             name: 'VirtualBox',
             sha256: '8a2da26ca69c1ddfc50fb65ee4fa8f269e692302046df4e2f48948775ba6339a',
             md5: 'MD5 de VirtualBox: 6e3e2912d2131bb249f416088ee49088ab841580',
             sha1: '6e3e2912d2131bb249f416088ee49088ab841580 ',
-            downloadLink: 'https://www.virtualbox.org/wiki/Downloads'
+			downloadLink: 'https://www.virtualbox.org/wiki/Downloads'
         }
     };
+	
     const appOrder = ['putty', 'plink', 'virtualbox'];
     let currentAppIndex = 0; // Índice de la aplicación actual (nivel)
     let coinsCollectedForCurrentApp = 0; // Monedas recolectadas en el nivel actual para mostrar hashes
