@@ -26,8 +26,8 @@ jobs:
         run: |
           az group list -o table
 
-      - name: List storage accounts in rg-federated-demo
+      - name: List storage accounts in federatedcreds-rg
         run: |
           az storage account list \
-            --resource-group rg-federated-demo \
+            --resource-group federatedcreds-rg \
             -o table
